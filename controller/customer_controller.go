@@ -23,6 +23,7 @@ func main() {
 		fmt.Println("Connection Established")
 	}
 	defer db.Close()
+	db.SingularTable(true)
 	db.AutoMigrate(m.Customer{})
 
 	router := mux.NewRouter()
@@ -45,7 +46,7 @@ func getCustomers(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "application/json")
 		w.Header().Set("Response-Code", "00")
 		w.Header().Set("Response-Desc", "Success")
-		json.NewEncoder(w).Encode(customers)
+		json.NewEncoder(w).Encode(&customers)
 	}
 }
 
