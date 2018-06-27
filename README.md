@@ -1,5 +1,11 @@
 <h1>RESTful web service using gorilla mux, gorm, and postgresql</h1>
 
+<div>
+<img src="./resources/go.png" height="350pt" width="350pt"/>
+<img src="./resources/golang.png"  height="350pt" width="350pt"/>
+</div>
+
+
 <p>This repository is an example on how to create RESTful web service using gorrila mux, gorm, and postgresql.</p>
 
 <h3>Prerequisites</h3>
